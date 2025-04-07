@@ -1,0 +1,26 @@
+{
+  "name": "crypto-tunnel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/EloyMuniz/crypto-tunnel.git",
+  "author": "Eloy <eloymjunior00@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.3",
+    "@types/express": "^5.0.1",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
+  },
+  "scripts": {
+    "dev": "tsup src/index.ts --watch --onSuccess \"node dist/index.js\"",
+    "build": "tsup src/index.ts src/routes/httpsroute.ts",
+    "start": "node dist/index.js"
+  }
+}

@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  dev:
+    container_name: crypto-tunnel-dev
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+      - ./src/server.js:/server.js
+    ports:
+      - '443:443'
+   
+
+  prod:
+    container_name: crypto-tunnel-prod
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+    ports:
+      - '443:443'
+    
+      
